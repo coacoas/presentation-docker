@@ -1,0 +1,14 @@
+artifactory: 
+  image: mattgruter/artifactory 
+  volumes:
+    - /home/bcarlson/Projects/artifactory/data:/artifactory/data
+    - /home/bcarlson/Projects/artifactory/backup:/artifactory/backup
+    - /home/bcarlson/Projects/artifactory/logs:/artifactory/logs
+  ports:
+    - "8081:8080"
+
+elasticsearch:
+  image: dockerfile/elasticsearch
+  ports:
+    - "9200"
+    - "9300"

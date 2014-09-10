@@ -1,0 +1,18 @@
+db:
+  image: tutum/mysql
+  ports:
+    - "3306"
+  environment:
+    MYSQL_PASS: Ho8yaBGfSKHg
+  
+wp:
+  image: tutum/wordpress-stackable
+  environment:
+    DB_PASS: Ho8yaBGfSKHg
+  ports:
+    - "80"
+  links:
+    - db:db
+  hostname: wp
+  domainname: coacoas.net
+

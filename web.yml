@@ -1,0 +1,9 @@
+web:
+  build: web
+  command: nginx
+  volumes:
+    - .:/usr/share/nginx/html
+  ports:
+    - "80"
+    - "443"
+
